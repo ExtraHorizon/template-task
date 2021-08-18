@@ -1,0 +1,16 @@
+{
+  "name": "test_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build",
+  "author": "Qompium",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "yarn build && node invoke",
+    "build": "yarn lint --fix && tsc",
+    "test": "yarn build && jest",
+    "test-local": "yarn build && jest && node invoke",
+    "lint": "eslint src/**/*.ts"
+  }
+}
