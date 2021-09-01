@@ -38,11 +38,15 @@ jobs:
           yarn
           yarn build
           yarn --production
-          # Package
-          zip build.zip -rqX build node_modules .env.example
+          if aws lambda get-function --function-name $PROJECT_NAME | grep "error occurred"; then
+            q publish-task
+          else
+            # Package
+            zip build.zip -rqX build node_modules .env.example
           
-          # Deploy
-          aws lambda update-function-code --region $AWS_REGION --function-name $PROJECT_NAME --zip-file fileb://$PWD/build.zip > /dev/null
+            # Deploy
+            aws lambda update-function-code --region $AWS_REGION --function-name $PROJECT_NAME --zip-file fileb://$PWD/build.zip > /dev/null
+          fi
           
           echo "${PROJECT_NAME} updated successfully to ${AWS_REGION}"
         env:
