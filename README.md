@@ -2,7 +2,7 @@
 
 ## Usage
 
-- Set your environment variables first!
+- Set your environment variables first! We need the credentials for the task publisher user on AWS:
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   
