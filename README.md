@@ -1,9 +1,5 @@
 # %{PROJECT_NAME}
 
-## Notes
-
-For running 'testcases' do 'yarn test'
-
 ## Usage
 
 - Set your environment variables first!
