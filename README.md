@@ -6,7 +6,8 @@
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   
-  These are needed in each environment. The development, staging and production environments are already created while initializing this repository
+    These are needed in each environment. The development, staging and production environments are already created while initializing this repository
+  
 2) Next you need to fill in your .env files --> .env.dev and/or .env.stage and/or .env.production
 3) Run `q generate-lambda-user`. This will create a new user with just enough permissions to execute the task. The result will be stored temporarily in the environment secrets. 
 4) Create a `feature/` branch
