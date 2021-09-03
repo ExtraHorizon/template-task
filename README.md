@@ -6,7 +6,7 @@
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   
-  These are needed in each environment. The development, staging and production environments are already creating while initializing this repository
+  These are needed in each environment. The development, staging and production environments are already created while initializing this repository
 - checkout the `init` branch
 - create a `feature/` branch
 - edit this readme to some more informative text
