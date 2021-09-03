@@ -6,9 +6,11 @@ For running 'testcases' do 'yarn test'
 
 ## Usage
 
-- checkout the `dev` branch
+- checkout the `init` branch
 - create a `feature/` branch
+- edit this readme to some more informative text
 - commit
 - create a pull request to `dev`
+- when merged, delete the `init` branch
 
-Bitbucket Pipelines will update the Task for you.
+Github actions will update the Task for you.
