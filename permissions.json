@@ -1,0 +1,6 @@
+{
+    "permissions": [
+      "VIEW_DOCUMENTS",
+      "UPDATE_DOCUMENTS"
+    ] 
+  }
