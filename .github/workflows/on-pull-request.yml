@@ -1,44 +1,44 @@
 name: Pull request
 on:
   pull_request:
-​
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-​
+
       - uses: actions/setup-node@v2
         with:
           registry-url: "https://npm.pkg.github.com"
           node-version: '14'
-​
+
       - name: Prepare npmrc
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PACKAGES_FULL_READ_ACCESS_TOKEN }}" > .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_FULL_READ_ACCESS_TOKEN }}" >> .npmrc
           echo "@extrahorizon:registry=https://npm.pkg.github.com" >> .npmrc
           echo "@fibricheck:registry=https://npm.pkg.github.com" >> .npmrc
-​
+
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
-​
+
       - uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-​
+
       - name: Install dependencies
         run: yarn --prefer-offline
-​
+
       - name: Lint
         run: yarn lint
-​
+
       - name: Licenses
         run: yarn q-license-check 
-​
+
       - name: Test
         run: yarn test --ci
