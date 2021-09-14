@@ -1,14 +1,14 @@
-name: Build & deploy to development
+name: Build & deploy to production
 on:
   workflow_dispatch:
   push:
     branches:
-      - dev
+      - production
 
 jobs:
   build:
     environment: 
-      name: development
+      name: production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
