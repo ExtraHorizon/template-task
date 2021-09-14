@@ -9,6 +9,5 @@ To do this, fill in your .env files --> `.env.dev` and/or `.env.stage` and/or `.
 4) Edit this readme to some more informative text
 5) Commit & Push
 6) Create a pull request to `dev`
-7) When merged, delete the `init` branch
 
 Github actions will create and update the Task for you.
