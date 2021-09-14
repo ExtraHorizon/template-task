@@ -44,7 +44,7 @@ jobs:
             aws lambda update-function-code --region $AWS_REGION --function-name $PROJECT_NAME --zip-file fileb://$PWD/build.zip > /dev/null
           else
             aws lambda create-function --function-name $PROJECT_NAME --zip-file fileb://$PWD/build.zip --handler build.handler --runtime nodejs14.x --role $AWS_ROLE_ID \
-            --environment Variables={API_HOST=$API_HOST,API_OAUTH_CONSUMER_KEY=$API_OAUTH_CONSUMER_KEY,API_OAUTH_CONSUMER_SECRET=$API_OAUTH_CONSUMER_SECRET,API_OAUTH_TOKEN=$API_OAUTH_TOKEN,API_OAUTH_TOKEN_SECRET=$API_OAUTH_TOKEN_SECRET}
+            --environment Variables="{API_HOST=$API_HOST,API_OAUTH_CONSUMER_KEY=$API_OAUTH_CONSUMER_KEY,API_OAUTH_CONSUMER_SECRET=$API_OAUTH_CONSUMER_SECRET,API_OAUTH_TOKEN=$API_OAUTH_TOKEN,API_OAUTH_TOKEN_SECRET=$API_OAUTH_TOKEN_SECRET}"
           fi
           
           echo "${PROJECT_NAME} updated successfully to ${AWS_REGION}"
