@@ -20,7 +20,7 @@ node_modules/
 
 # dotenv environment variables file
 .env
-.env.dev
+.env.development
 .env.stage
 .env.production
 .env.test
