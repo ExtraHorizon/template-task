@@ -1,13 +1,40 @@
-# %{PROJECT_NAME}
+# Getting started with your new task
 
-## Usage
+## Setting up npmrc
+First add the following lines to your `.npmrc` file
 
-1) Set your environment variables first! We need the credentials for the tasks on AWS labmda
-To do this, fill in your .env files --> `.env.dev` and/or `.env.stage` and/or `.env.production`
-2) Run `q generate-lambda-user`. This will create a new user with just enough permissions to execute the task. The result will be stored temporarily in the environment secrets. 
-3) Create a `feature/` branch
-4) Edit this readme to some more informative text
-5) Commit & Push
-6) Create a pull request to `dev`
+```
+@extrahorizon:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=<your-auth-token>
+```
 
-Github actions will create and update the Task for you.
+where `your-auth-token` is a github [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+This will allow you to use the Extra Horizon SDK.
+
+## Setting up environment
+
+You need to configure some environment variables so that the SDK can properly authenticate against the Extra Horizon cloud.
+Edit `.env.example`, fill in all the environment variables there and save the file to `.env`.
+
+## Local testing
+
+Typically a task runs in the context of the backend. However, you can test the task locally by invoking it through `invoke.js` (or use `yarn start`). 
+This allows you to do some local testing.
+
+# Scripts
+
+## building
+
+To build the project
+
+`npm run build` or `yarn build`
+
+## running
+
+`npm run start` or `yarn start`
+
+## testing
+
+`npm run test` or `yarn test`
+

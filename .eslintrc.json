@@ -1,6 +1,7 @@
 {
-  "extends": ["@qompium/eslint-config-q-node"],
   "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
     "project": "./tsconfig.eslint.json"
   }
 }
