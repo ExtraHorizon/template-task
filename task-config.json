@@ -2,6 +2,6 @@
   "name": "projectname",
   "description": "projectname task",
   "path": "build",
-  "entryPoint": "build/index",
+  "entryPoint": "index.handler",
   "runtime": "nodejs14.x"
 }
