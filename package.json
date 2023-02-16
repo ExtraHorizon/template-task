@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "yarn build && node invoke",
-    "build": "yarn lint --fix && tsc && cp package.json .env.example build && cd build && yarn install --production",
+    "build": "yarn lint --fix && tsc && cp package.json build && cp .env.example build && cd build && yarn install --production",
     "test": "yarn build && jest",
     "test-local": "yarn build && jest && node invoke",
     "lint": "eslint src/**/*.ts"
