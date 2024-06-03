@@ -15,13 +15,13 @@ export const apiConfig: ApiConfig = {
 };
 
 interface ApiConfig {
-  host: string,
+  host: string;
   oauthConsumer: {
-    key: string,
-    secret: string,
-  },
+    key: string;
+    secret: string;
+  };
   oauthToken: {
-    key: string,
-    secret: string,
-  }
+    key: string;
+    secret: string;
+  };
 }
