@@ -1,13 +1,12 @@
-// production code here
+import { Task } from '@extrahorizon/javascript-sdk';
+import { exh } from './exh';
 
-import { authenticateSDK, sdk } from './services/sdk';
-
-export async function handler(event: any) {
-  await authenticateSDK();
+export async function handler(task: Task) {
+  /* Print the received Task */
+  console.log('Task:', task);
 
   /* Use the sdk to interact with Extra Horizon */
-  console.log('User:', await sdk.users.me());
+  console.log('User:', await exh.users.me());
 
-  /* Print Received event */
-  console.log('Event:', event);
+  // Your code here
 }
