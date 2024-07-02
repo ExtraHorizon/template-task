@@ -1,7 +1,6 @@
 {
+  "extends": ["@extrahorizon/eslint-config-node"],
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest",
     "project": "./tsconfig.eslint.json"
   }
 }
