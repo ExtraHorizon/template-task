@@ -28,6 +28,9 @@ node_modules/
 # Visual Studio Code configuration
 .vscode/
 
+# Jetbrains IDEs
+.idea/
+
 # TypeScript build
 dist/
 build/
