@@ -1,7 +1,6 @@
-import { Task } from '@extrahorizon/javascript-sdk';
-import { exh } from './exh';
+import { exh } from './exh.js';
 
-export async function handler(task: Task) {
+export async function handler(task) {
   /* Print the received Task */
   console.log('Task:', task);
 

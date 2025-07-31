@@ -1,50 +1,22 @@
-# Getting started with your new task
+# Getting Started
 
-## Local testing
+This is a basic template for an Extra Horizon task.
+It is designed to help you quickly set up a new task with the necessary configuration and dependencies.
 
-Typically a task runs in the context of the Extra Horizon platform. However, you can test the task locally by invoking it through `invoke.js` (or use `yarn start`). 
-This allows you to do some local testing.
+It includes a simple example of how to use the Extra Horizon SDK to interact with the platform.
+The SDK requires credentials to access the Extra Horizon platform, which are accepted through environment variables.
+The credentials are automatically injected into the task environment by the Extra Horizon CLI, based on `executionCredentials` specified in `task-config.json`.
 
-You need to configure some environment variables so that the SDK can properly authenticate against the Extra Horizon cloud.
-Edit `.env.example`, fill in all the environment variables there and save the file to `.env`.
+## Deploying the Task
 
-## Deploying the task
-By default the task is setup to be deployed with the Extra Horizon CLI.
-
-The environment variables can be replaced in the `task-config.json` file (as they're defined in the `.env` file) or
-as environment variables to the CLI task sync (`exh tasks sync`).
-
+The easiest way to deploy the task is using the Extra Horizon CLI.
 An example of how to deploy the task is shown below.
 More information can be found in the [Extra Horizon CLI documentation](https://docs.extrahorizon.com/cli/).
 
 ```sh
-# Transpile the code and include the dependencies in the build folder
-yarn build
+# Install the dependencies
+npm install
 
-# Set the environment variables to forward to the task
-export TASK_API_HOST="<Your Extra Horizon host>";
-export TASK_API_OAUTH_CONSUMER_KEY="...";
-export TASK_API_OAUTH_CONSUMER_SECRET="...";
-export TASK_API_OAUTH_TOKEN="...";
-export TASK_API_OAUTH_TOKEN_SECRET="...";
-
-# Deploy the task
+# Sync the task with the Extra Horizon platform
 exh tasks sync --path ./task-config.json
 ```
-
-# Scripts
-
-## building
-
-To build the project
-
-`npm run build` or `yarn build`
-
-## running
-
-`npm run start` or `yarn start`
-
-## testing
-
-`npm run test` or `yarn test`
-

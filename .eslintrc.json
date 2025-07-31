@@ -1,6 +1,0 @@
-{
-  "extends": ["@extrahorizon/eslint-config-node"],
-  "parserOptions": {
-    "project": "./tsconfig.eslint.json"
-  }
-}
