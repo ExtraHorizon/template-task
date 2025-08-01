@@ -1,14 +1,10 @@
 {
-  "name": "projectname",
-  "description": "projectname task",
-  "path": "build",
-  "entryPoint": "index.handler",
-  "runtime": "nodejs18.x",
-  "environment": {
-    "API_HOST": "$TASK_API_HOST",
-    "API_OAUTH_CONSUMER_KEY": "$TASK_API_OAUTH_CONSUMER_KEY",
-    "API_OAUTH_CONSUMER_SECRET": "$TASK_API_OAUTH_CONSUMER_SECRET",
-    "API_OAUTH_TOKEN": "$TASK_API_OAUTH_TOKEN",
-    "API_OAUTH_TOKEN_SECRET": "$TASK_API_OAUTH_TOKEN_SECRET"
+  "name": "template-task",
+  "description": "template-task description",
+  "path": "./",
+  "entryPoint": "src/index.handler",
+  "runtime": "nodejs22.x",
+  "executionCredentials": {
+    "permissions": []
   }
 }
