@@ -3,7 +3,7 @@
   "description": "template-task description",
   "path": "./",
   "entryPoint": "src/index.handler",
-  "runtime": "nodejs22.x",
+  "runtime": "nodejs24.x",
   "executionCredentials": {
     "permissions": []
   }
