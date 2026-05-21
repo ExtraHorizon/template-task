@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "@extrahorizon/javascript-sdk": "^8.11.0",
+    "@extrahorizon/javascript-sdk": "^8.12.0",
     "dotenv-safe": "^8.2.0"
   }
 }
