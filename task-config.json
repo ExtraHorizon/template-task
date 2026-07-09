@@ -6,5 +6,6 @@
   "runtime": "nodejs24.x",
   "executionCredentials": {
     "permissions": []
-  }
+  },
+  "$schema": "https://swagger.extrahorizon.com/cli/1.13.6/config-json-schemas/TaskConfig.json"
 }
