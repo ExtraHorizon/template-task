@@ -7,5 +7,5 @@
   "executionCredentials": {
     "permissions": []
   },
-  "$schema": "https://swagger.extrahorizon.com/cli/1.13.7/config-json-schemas/TaskConfig.json"
+  "$schema": "https://swagger.extrahorizon.com/cli/1.13.8/config-json-schemas/TaskConfig.json"
 }
